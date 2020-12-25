@@ -1,0 +1,41 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+
+//int f1(int x)
+//{ 	static int z=3,y=0;
+//  	y++;
+//  	z++;
+//  	return(x+y+z);
+////}
+////main()
+////{ 	int a=1,k;
+////  	for(k=0;k<3;k++) printf("%4d",f1(a));
+////}
+//
+//
+////int main()
+////{
+////    printf("");
+////    return 0;
+////}
+//
+//
+Zdgy(int m,int n)
+{
+    int  r;
+    while ((r=m%n)!=0)
+    {
+        m=n;
+        n=r;
+    }
+    return  n;
+}
+
+int main()
+{
+    int  a, b, n;
+    scanf("%d%d", &a, &b);
+    printf("%d\n", Zdgy(a,b));
+}
